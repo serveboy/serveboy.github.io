@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e7b8f10-f752-4e98-9389-da393f7365de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wap/firstHtml.html" />
-    </list>
+    <list default="true" id="9e7b8f10-f752-4e98-9389-da393f7365de" name="Default" comment="" />
     <ignored path="serveboy.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -579,12 +577,12 @@
       <created>1490062277043</created>
       <option name="number" value="Default" />
       <updated>1490062277043</updated>
-      <workItem from="1490062278409" duration="330000" />
+      <workItem from="1490062278409" duration="711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330000" />
+    <option name="totallyTimeSpent" value="711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="975" extended-state="0" />
