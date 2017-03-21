@@ -10,9 +10,9 @@
 <script type="text/javascript">
 
     //-------seajs.use为入口模块，也可以用 data-main="";(区别在于use可以加载多个入口函数，以及做一些回调的操作)------------
-    seajs.use(['utils/demo', 'layer'], function (i, layer) {
+    seajs.use(['util/demo', 'layer'], function (i, layer) {
         //----------调用init中对外公开的接口--------------------------------
-//        i.alertFun();
+        i.alertFun();
         //信息框
         //----------习惯了在页面<script>写$就可以了-------------------
         $(function () {

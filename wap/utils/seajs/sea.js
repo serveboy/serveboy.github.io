@@ -273,7 +273,7 @@ seajs.config({
 
     // 路径配置
     paths: {
-        //'utils': ''  //解析为public/home/js/
+        'util': 'utils/js'  //解析为public/home/js/
     },
 
     // 别名配置
