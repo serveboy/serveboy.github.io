@@ -1,0 +1,25 @@
+body{
+  min-width:1000px;
+}
+.mainTab{
+  float:left;
+  padding:100px 0 0 20px;
+}
+.mainTab ul{
+   width:150px;
+   text-align: center;
+   font-size:18px;
+ }
+.mainTab ul li {
+  border: 1px solid #337ab7;
+  border-radius: 10px;
+  margin: 0;
+}
+.mainContet{
+ padding: 50px 0 0 180px;
+  height: 850px;
+}
+.bigPic{
+  height:500px;
+  width:1000px;
+}
