@@ -266,19 +266,20 @@
         }
     }
 }(this);
+var mainPath = window.location.pathname.split('/')[1];
 seajs.config({
     // Sea.js 的基础路径  ./表示相对于当前文件的位置
-    base: "./wap/",
+    base: "/wap/",
 
     // 路径配置
     paths: {
-        'utils': './utils/js'  //解析为public/home/js/
+        //'utils': ''  //解析为public/home/js/
     },
 
     // 别名配置
     alias: {
-        'jquery': 'utils/jquery-1.11.3.min',
-        'layer': 'utils/layer_mobile/layer'
+        'jquery':'utils/js/jquery-1.11.3.min',
+        'layer':'utils/js/layer_mobile/layer'
     },
 
     preload: ['jquery', 'layer'],//预先加载

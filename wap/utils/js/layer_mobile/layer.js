@@ -70,7 +70,8 @@
         var e = document.scripts, n = e[e.length - 1], i = n.src, a = i.substring(0, i.lastIndexOf("/") + 1);
         n.getAttribute("merge") || document.head.appendChild(function () {
             var e = t.createElement("link");
-            return e.href = a + "./utils/js/layer_mobile/layer.css?2.0", e.type = "text/css", e.rel = "styleSheet", e.id = "layermcss", e
+            console.log(a);
+            return e.href = a + "./wap/utils/js/layer_mobile/layer.css?2.0", e.type = "text/css", e.rel = "styleSheet", e.id = "layermcss", e
         }());
         return layer
     }) : function () {
