@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e7b8f10-f752-4e98-9389-da393f7365de" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wap/pages/canvas/hitWow.html" afterPath="$PROJECT_DIR$/wap/pages/canvas/hitWow.html" />
     </list>
     <ignored path="serveboy.github.io.iws" />
@@ -42,8 +43,8 @@
       <file leaf-file-name="hitWow.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wap/pages/canvas/hitWow.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33247423">
-              <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.57160646">
+              <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -725,12 +726,12 @@
       <workItem from="1490062278409" duration="28853000" />
       <workItem from="1490234968089" duration="8039000" />
       <workItem from="1490324315467" duration="13668000" />
-      <workItem from="1491014462756" duration="26347000" />
+      <workItem from="1491014462756" duration="26416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76907000" />
+    <option name="totallyTimeSpent" value="76976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="975" extended-state="0" />
@@ -1055,8 +1056,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wap/pages/canvas/hitWow.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33247423">
-          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.57160646">
+          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
