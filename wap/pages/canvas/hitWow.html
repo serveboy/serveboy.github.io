@@ -51,7 +51,7 @@
 
 <div class="panel-default infoStyle">
     <canvas id="myCav" width="700" height="500" style="cursor: none;" ></canvas>
-    <h1>分数为:<code id="score">0</code></h1>
+    <!--<h1>分数为:<code id="score">0</code></h1>-->
 </div>
 <script type="text/javascript">
 
@@ -107,7 +107,12 @@
         function drawScreen() {
             clearScreen();
 
-
+            //绘制比分
+            ctx.font = '40px serif';
+            ctx.strokeStyle = '#fff';
+            ctx.strokeText('打地鼠',50,50);
+            ctx.fillStyle = "#fff";
+            ctx.fillText("你的得分:"+score,450,50);
 
             for(i=0;i<3;i++){
                 for(j=0; j<3; j++){
