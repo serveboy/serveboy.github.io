@@ -71,7 +71,7 @@
         n.getAttribute("merge") || document.head.appendChild(function () {
             var e = t.createElement("link");
             console.log(a);
-            return e.href = a + "./wap/utils/js/layer_mobile/layer.css?2.0", e.type = "text/css", e.rel = "styleSheet", e.id = "layermcss", e
+            return e.href = a + "/wap/utils/js/layer_mobile/layer.css?2.0", e.type = "text/css", e.rel = "styleSheet", e.id = "layermcss", e
         }());
         return layer
     }) : function () {

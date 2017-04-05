@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World of Warcraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../utils/seajs/sea.js"></script>
+    <link rel='icon' href='../utils/pic/title.ico ' type=‘image/x-ico’/>
+    <link rel="stylesheet" href="../utils/css/bootstrap.css">
+    <link rel="stylesheet" href="../utils/css/my.css">
+</head>
+<body>
+<div class="title">
+    <div id="frame">
+        <div id="photos" class="play">
+            <img src="../utils/pic/4.jpeg">
+            <img src="../utils/pic/6.jpeg">
+            <img src="../utils/pic/background.jpg">
+            <img src="../utils/pic/6.jpeg">
+            <ul id="dis">
+                <li><h1>Lok-Tar Ogar。</h1></li>
+                <li><h1>天那!你真高!</h1></li>
+                <li><h1>时间就是金钱,我的朋友</h1></li>
+                <li><h1>纳鲁没有忘记我们。</h1></li>
+            </ul>
+        </div>
+    </div>
+    <div class="btn-group userMsg">
+        <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="javascript:void 0"><i class="icon-pencil"></i> Edit</a></li>
+            <li><a href="javascript:void 0"><i class="icon-trash"></i> Delete</a></li>
+            <li><a href="javascript:void 0"><i class="icon-ban-circle"></i> Ban</a></li>
+            <li class="divider"></li>
+            <li><a href="javascript:void 0"><i class="i"></i> Make admin</a></li>
+        </ul>
+    </div>
+</div>
+<div class="mainTab">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="javascript:void 0">首页</a></li>
+        <li><a href="javascript:void 0">JavaScript</a></li>
+        <li><a href="javascript:void 0">css</a></li>
+        <li><a href="javascript:void 0">环境搭建</a></li>
+        <li class="disabled"><a href="javascript:void 0">未完待续</a></li>
+    </ul>
+</div>
+
+<div class="panel-default infoStyle">
+<h1>深度克隆</h1>
+<div>
+    <pre>
+        function deepClone(obj) {
+            var result,oClass = isClass(obj);
+            if(oClass == 'Object'){result={}}
+            else if(oClass == 'Array'){result=[]}
+            else{return obj}
+            for(var key in obj) {
+                var copy = obj[key];
+                if(isClass(copy) === 'Object' || isClass(copy) === 'Array'){
+                    result[key] = arguments.callee(copy)
+                }else{
+                    result[key]=obj[key];
+                }
+            }
+            return result;
+
+        }
+        function isClass(obj){
+            if(o===null) return "Null";
+            if(o===undefined) return "Undefined";
+            return object.prototype.toString.call(obj).slice(8,-1);
+
+        }
+    </pre>
+</div>
+</div>
+<script type="text/javascript">
+
+    //-------seajs.use为入口模块，也可以用 data-main="";(区别在于use可以加载多个入口函数，以及做一些回调的操作)------------
+    seajs.use([], function () {
+        function deepClone(obj) {
+            var result,oClass = isClass(obj);
+            if(oClass == 'Object'){result={}}
+            else if(oClass == 'Array'){result=[]}
+            else{return obj}
+            for(var key in obj) {
+                var copy = obj[key];
+                if(isClass(copy) === 'Object' || isClass(copy) === 'Array'){
+                    result[key] = arguments.callee(copy)
+                }else{
+                    result[key]=obj[key];
+                }
+            }
+            return result;
+
+        }
+        function isClass(obj){
+            if(obj===null) return "Null";
+            if(obj===undefined) return "Undefined";
+            return Object.prototype.toString.call(obj).slice(8,-1);
+
+        }
+
+        var oPerson={
+            oName:"rookiebob",
+            oAge:"18",
+            oAddress:{
+                province:"beijing"
+            },
+            ofavorite:[
+                "swimming",
+                {reading:"history book"}
+            ],
+            skill:function(){
+                console.log("bob is coding");
+            }
+        };
+        //深度克隆一个对象
+        var oNew=deepClone(oPerson);
+
+        oNew.ofavorite[1].reading="picture";
+        console.log(oNew.ofavorite[1].reading);//picture
+        console.log(oPerson.ofavorite[1].reading);//history book
+
+        oNew.oAddress.province="shanghai";
+        console.log(oPerson.oAddress.province);//beijing
+        console.log(oNew.oAddress.province);//shanghai
+
+    });
+</script>
+</body>
+</html>

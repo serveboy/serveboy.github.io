@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World of Warcraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../../utils/seajs/sea.js"></script>
+    <link rel='icon' href='../../utils/pic/title.ico ' type=‘image/x-ico’/>
+    <link rel="stylesheet" href="../../utils/css/bootstrap.css">
+    <link rel="stylesheet" href="../../utils/css/my.css">
+<style>
+</style>
+</head>
+<body>
+<div class="title">
+    <div id="frame">
+        <div id="photos" class="play">
+            <img src="../../utils/pic/4.jpeg">
+            <img src="../../utils/pic/6.jpeg">
+            <img src="../../utils/pic/background.jpg">
+            <img src="../../utils/pic/6.jpeg">
+            <ul id="dis">
+                <li><h1>Lok-Tar Ogar。</h1></li>
+                <li><h1>天那!你真高!</h1></li>
+                <li><h1>时间就是金钱,我的朋友</h1></li>
+                <li><h1>纳鲁没有忘记我们。</h1></li>
+            </ul>
+        </div>
+    </div>
+    <div class="btn-group userMsg">
+        <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="javascript:void 0"><i class="icon-pencil"></i> Edit</a></li>
+            <li><a href="javascript:void 0"><i class="icon-trash"></i> Delete</a></li>
+            <li><a href="javascript:void 0"><i class="icon-ban-circle"></i> Ban</a></li>
+            <li class="divider"></li>
+            <li><a href="javascript:void 0"><i class="i"></i> Make admin</a></li>
+        </ul>
+    </div>
+</div>
+<div class="mainTab">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="javascript:void 0">首页</a></li>
+        <li><a href="javascript:void 0">JavaScript</a></li>
+        <li><a href="javascript:void 0">css</a></li>
+        <li><a href="javascript:void 0">环境搭建</a></li>
+        <li class="disabled"><a href="javascript:void 0">未完待续</a></li>
+    </ul>
+</div>
+
+<div class="panel-default infoStyle">
+    <canvas id="myCav" width="700" height="500" style="cursor: none;" ></canvas>
+    <h1>分数为:<code id="score">0</code></h1>
+</div>
+<script type="text/javascript">
+
+    //-------seajs.use为入口模块，也可以用 data-main="";(区别在于use可以加载多个入口函数，以及做一些回调的操作)------------
+    seajs.use([], function () {
+        var cav,ctx,bg,knife,knifePress= false;
+        var sprites = [], holes = [],score = 0;
+        function init() {
+            cav = document.querySelector('#myCav');
+            ctx = cav.getContext('2d');
+
+            bg = new Image();
+            bg.src = '../../utils/pic/4.jpeg';
+            bg.onload = function(){};
+
+
+
+            var mouseImg = new Image();
+            mouseImg.src = '../../utils/pic/person.png';
+            for(var i = 0;i < 3; i++) {
+                var arr = [];
+                for(var j = 0; j< 3; j++) {
+                    var s = new Sprite(180, 180, 50+240*i, 120*j, 'hide', mouseImg);
+                    arr[j] = s;
+                }
+                sprites[i] = arr;
+            }
+
+            var hole = new Image();
+            hole.src = '../../utils/pic/hole.png';
+            for(var i = 0;i < 3; i++) {
+                var arr = [];
+                for(var j = 0; j< 3; j++) {
+                    var s = new Hole(180, 180, 50+240*i, 120*j, 'show', hole);
+                    arr[j] = s;
+                }
+                holes[i] = arr;
+            }
+
+            var knifeImg = new Image();
+            knifeImg.src = '../../utils/pic/knife.png';
+            knifeImg.onload = function() {
+                knife = new knifeSprite(80, 80, 100, 100,knifeImg);
+            }
+
+            bindEvent();
+
+            setInterval(drawScreen,30);
+            setInterval(updateLogic,3000);
+
+        }
+
+        function drawScreen() {
+            clearScreen();
+
+
+
+            for(i=0;i<3;i++){
+                for(j=0; j<3; j++){
+                    holes[i][j].draw();
+                }
+            }
+
+            for(i=0;i<3;i++){
+                for(j=0; j<3; j++){
+                    sprites[i][j].draw();
+                }
+            }
+
+            if(knife){
+                knife.draw(knifePress);
+            }
+            document.querySelector('#score').innerHTML = score;
+
+        }
+        function clearScreen() {
+            ctx.drawImage(bg,0,0,ctx.canvas.width,ctx.canvas.height);
+        };
+
+        function updateLogic(){
+
+            for(i=0;i<3;i++){
+                for(j=0; j<3; j++){
+                    sprites[i][j].state=='hide'
+                }
+            }
+            var maxPerson = Math.round(Math.random()*10 -1);
+            for(var i = 0 ;i < maxPerson ; i++) {
+                var a = Math.round(Math.random()*100)%3;
+                var b = Math.round(Math.random()*100)%3;
+                sprites[a][b].state='show';
+            }
+
+        }
+
+        function knifeSprite(w,h,x,y,img){
+            knifeSprite.prototype.w = w;
+            knifeSprite.prototype.x = x;
+            knifeSprite.prototype.y = y;
+            knifeSprite.prototype.h = h;
+
+            knifeSprite.prototype.draw = function(isHit) {
+                if(isHit) {
+                    ctx.save();
+
+                    ctx.translate(this.x -3,this.y - 3);
+                    ctx.rotate(-Math.PI/180*330);
+                    ctx.drawImage(img,0,0,w,h);
+
+                    ctx.restore();//恢复状态
+                }else {
+                    ctx.drawImage(img,this.x,this.y,w,h)
+                }
+            }
+        }
+        function Sprite(w,h,x,y,state,img) {
+            var self = this;
+            this.w = w;
+            this.h = h;
+            this.x = x;
+            this.y = y;
+            this.state = state;
+            this.img = img;
+            this.draw = function(){
+                if(this.state == 'show'){
+                    ctx.drawImage(img, this.x, this.y, this.w, this.h);
+                    setTimeout(function(){
+                        self.state = 'hide';
+                    },3000);
+                }
+            }
+        }
+        var Hole = function(w, h, x, y, state, image){
+            var self = this;
+            this.w = w;
+            this.h = h;
+            this.x = x;
+            this.y = y;
+            this.image = image;
+            this.state = state;
+
+            this.draw = function(){
+                if(this.state == 'show'){
+                    ctx.drawImage(image, this.x, this.y, this.w, this.h);
+                }
+            }
+        }
+
+
+
+        function knifeDown(){
+            knifePress = true;
+        }
+
+        function knifeUp(event){
+
+            knifePress = false;
+
+            hit(event.x, event.y);
+        }
+        function hideCursor(obj){
+            obj.style.cursor='none';
+        }
+
+        function showCursor(obj){
+            obj.style.cursor='';
+        }
+
+        function knifeMove(e){
+            if(knife){
+                knife.x = event.x - 180 - 40;
+                knife.y = event.y -250 - 40;
+            }
+        }
+
+        function hit(x, y){
+            x = event.x - 180 - 40;
+            y = event.y -250 - 40;
+            for(i=0;i<3;i++){
+                for(j=0;j<3;j++){
+                    var s = sprites[i][j];
+
+                    if(s.state=='show'){
+                        if(x>s.x+30 && y>s.y && x<(s.x+s.w+30) && y<(s.y+s.h)){
+                            score++;
+                            s.state = 'hide';
+                        }
+                    }
+                }
+            }
+        }
+
+        function bindEvent() {
+
+            cav.onmouseover = function(e) {
+                hideCursor(this);
+            }
+            cav.onmouseout = function(e) {
+                showCursor(this);
+            }
+            cav.onmousemove = function(e) {
+                knifeMove(this);
+            }
+            cav.onmousedown = function(e) {
+                hideCursor(this);
+                knifeDown();
+            }
+            cav.onmouseup = function(e) {
+                hideCursor(this);
+                knifeUp(e);
+            }
+        }
+
+
+        init();
+    });
+</script>
+</body>
+</html>

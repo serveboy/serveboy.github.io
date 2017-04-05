@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>World of Warcraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="./wap/utils/seajs/sea.js"></script>
     <link rel='icon' href='./wap/utils/pic/title.ico ' type=‘image/x-ico’ />
     <link rel="stylesheet" href="./wap/utils/css/bootstrap.css" >
@@ -24,6 +25,17 @@
             </ul>
         </div>
     </div>
+    <div class="btn-group userMsg">
+        <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+            <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+            <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="i"></i> Make admin</a></li>
+        </ul>
+    </div>
 </div>
 <div class="mainTab">
     <ul class="nav nav-pills nav-stacked">
@@ -35,11 +47,9 @@
     </ul>
 </div>
 <div class="panel-default mainContet">
-    <div class="panel-heading">台词</div>
-    <div class="panel-body">“复活吧我的勇士”<br/>
-        “为你而战我的女士”
-    </div>
-    <div class="panel-footer">作者：狗男女</div>
+    <div class="panel-heading">缓动动画JS小算法<a href="wap/pages/jsMove.html"><button style="margin-left:20px;" class="btn btn-info">详情</button></a></div>
+    <div class="panel-heading">缓动动画JS小算法<a href="wap/pages/jsMove.html"><button style="margin-left:20px;" class="btn btn-info">详情</button></a></div>
+    <div class="panel-heading">canvas<a href="wap/pages/canvas/firstCanvas.html"><button style="margin-left:20px;" class="btn btn-info">详情</button></a></div>
 </div>
 <script type="text/javascript">
 
@@ -53,14 +63,12 @@
             $("#btnCLick").click(function () {
                 layer.open({
                     type: '0',
-                    content: '通过style设置你想要的样式'
-                    , style: 'background-color:#12345; color:#00000; border:none;' //自定风格
-                    , time: 3
+                    content: '通过style设置你想要的样式',
+                    time: 3
                 });
             })
         })
     });
-
 </script>
 </body>
 </html>
