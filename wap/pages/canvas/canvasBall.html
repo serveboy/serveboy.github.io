@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World of Warcraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../../utils/seajs/sea.js"></script>
+    <link rel='icon' href='../../utils/pic/title.ico ' type=‘image/x-ico’/>
+    <link rel="stylesheet" href="../../utils/css/bootstrap.css">
+    <link rel="stylesheet" href="../../utils/css/my.css">
+</head>
+<body>
+<div class="title">
+    <div id="frame">
+        <div id="photos" class="play">
+            <img src="../../utils/pic/4.jpeg">
+            <img src="../../utils/pic/6.jpeg">
+            <img src="../../utils/pic/background.jpg">
+            <img src="../../utils/pic/6.jpeg">
+            <ul id="dis">
+                <li><h1>Lok-Tar Ogar。</h1></li>
+                <li><h1>天那!你真高!</h1></li>
+                <li><h1>时间就是金钱,我的朋友</h1></li>
+                <li><h1>纳鲁没有忘记我们。</h1></li>
+            </ul>
+        </div>
+    </div>
+    <div class="btn-group userMsg">
+        <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="javascript:void 0"><i class="icon-pencil"></i> Edit</a></li>
+            <li><a href="javascript:void 0"><i class="icon-trash"></i> Delete</a></li>
+            <li><a href="javascript:void 0"><i class="icon-ban-circle"></i> Ban</a></li>
+            <li class="divider"></li>
+            <li><a href="javascript:void 0"><i class="i"></i> Make admin</a></li>
+        </ul>
+    </div>
+</div>
+<div class="mainTab">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="../../../index.html">首页</a></li>
+        <li><a href="javascript:void 0">JavaScript</a></li>
+        <li><a href="javascript:void 0">css</a></li>
+        <li><a href="javascript:void 0">环境搭建</a></li>
+        <li class="disabled"><a href="javascript:void 0">未完待续</a></li>
+    </ul>
+</div>
+
+//html 添加画布
+<canvas id="game" width="700" height="500"></canvas>
+<script type="text/javascript">
+
+    //-------seajs.use为入口模块，也可以用 data-main="";(区别在于use可以加载多个入口函数，以及做一些回调的操作)------------
+    seajs.use([], function () {
+
+        //创建球构造函数
+        function ball() {
+            this.r = this.rand(20);
+            this.x = this.r;
+            this.y = this.r;
+            this.speedX = this.rand(10);
+            this.speedY = this.rand(10);
+            this.width = 0;
+            this.height = 0;
+            this.canvas = {};
+            this.color = 'rgb('+this.rand(255)+','+this.rand(255)+','+this.rand(255)+')';
+            this.init();
+        }
+//2.向原型链添加方法
+        ball.prototype = {
+            init:function () {
+                var game = document.getElementById('game');
+                this.canvas = game.getContext('2d');
+                this.width=game.width;
+                this.height=game.height;
+            },
+            rand:function (num) {
+                return Math.floor(Math.random() * num+1);
+            },
+            play:function () {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x>this.width-this.r) {
+                    this.speedX = -this.speedX;
+                }
+                if (this.x<this.r) {
+                    this.speedX = Math.abs(this.speedX);
+                }
+                if (this.y>this.height-this.r) {
+                    this.speedY = -this.speedY;
+                }
+                if (this.y<this.r) {
+                    this.speedY = Math.abs(this.speedY);
+                }
+                this.canvas.beginPath();
+                this.canvas.fillStyle = this.color;
+                this.canvas.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+                this.canvas.fill();
+            }
+        };
+        //3.创建100个小球
+        var arr = [];
+        for (var i=0;i<100;i++) {
+            arr[i] = new ball();
+        }
+        //4.使用定时器,每个30ms刷新屏幕
+        setInterval(function () {
+            arr[0].canvas.clearRect(0,0,700,500);
+            for (var i=0;i<arr.length;i++) {
+                arr[i].play();
+            }
+        },30)
+
+
+    });
+</script>
+</body>
+</html>
