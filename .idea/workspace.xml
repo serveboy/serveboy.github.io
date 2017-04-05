@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e7b8f10-f752-4e98-9389-da393f7365de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wap/pages/canvas/firstCanvas.html" afterPath="$PROJECT_DIR$/wap/pages/canvas/firstCanvas.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wap/pages/canvas/hitWow.html" afterPath="$PROJECT_DIR$/wap/pages/canvas/hitWow.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wap/pages/deepClone.html" afterPath="$PROJECT_DIR$/wap/pages/deepClone.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wap/pages/jsMove.html" afterPath="$PROJECT_DIR$/wap/pages/jsMove.html" />
     </list>
     <ignored path="serveboy.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,21 +39,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jsMove.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jsMove.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wap/pages/jsMove.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8069739">
-              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hitWow.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hitWow.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wap/pages/canvas/hitWow.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.884615">
-              <caret line="43" column="68" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.46575344">
+              <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -122,10 +118,10 @@
         <option value="$PROJECT_DIR$/wap/utils/js/layer_mobile/layer.js" />
         <option value="$PROJECT_DIR$/wap/utils/css/my.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/wap/pages/canvas/hitWow.html" />
         <option value="$PROJECT_DIR$/wap/pages/canvas/firstCanvas.html" />
         <option value="$PROJECT_DIR$/wap/pages/deepClone.html" />
         <option value="$PROJECT_DIR$/wap/pages/jsMove.html" />
+        <option value="$PROJECT_DIR$/wap/pages/canvas/hitWow.html" />
       </list>
     </option>
   </component>
@@ -723,12 +719,12 @@
       <workItem from="1490062278409" duration="28853000" />
       <workItem from="1490234968089" duration="8039000" />
       <workItem from="1490324315467" duration="13668000" />
-      <workItem from="1491014462756" duration="26578000" />
+      <workItem from="1491014462756" duration="26685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77138000" />
+    <option name="totallyTimeSpent" value="77245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="975" extended-state="0" />
@@ -1012,29 +1008,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.576923">
-          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#a#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#a#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#a#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wap/pages/canvas/hitWow.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.884615">
-          <caret line="43" column="68" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wap/pages/canvas/firstCanvas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.4150944">
@@ -1055,9 +1028,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wap/pages/jsMove.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8069739">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.576923">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#a#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#a#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#a#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wap/pages/canvas/hitWow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46575344">
+          <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
