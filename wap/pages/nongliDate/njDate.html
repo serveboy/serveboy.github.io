@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery1.11.1.js"></script>
+    <link href="date.css" rel="stylesheet" type="text/css"/>
+    <script src="date.js"></script>
+</head>
+<body>
+<div>
+    <input type="text" id="birthday" data-input-id="b_input" class="Js_date input public_icon_sel" data-type="1" value="" placeholder="请选择日期"/>
+    <input type="hidden" name="birthday" id="b_input"/>
+</div>
+
+<script>
+        var calendar1 = new lCalendar().init('#'+$('.Js_date').attr('id'));
+</script>
+</body>
+</html>
